@@ -1,0 +1,67 @@
+Start testing: Oct 03 23:52 CST
+----------------------------------------------------------
+1/1 Testing: sparse_tests
+1/1 Test: sparse_tests
+Command: "/mnt2/zjh/code/Goleta/session_84/a/build/sparse_tests"
+Directory: /mnt2/zjh/code/Goleta/session_84/a/build
+"sparse_tests" start time: Oct 03 23:52 CST
+Output:
+----------------------------------------------------------
+== CSR build from triplets ==
+  [PASS] dimensions preserved
+  [PASS] nnz matches
+  [PASS] row_ptr layout
+  [PASS] col_idx layout
+  [PASS] values layout
+== Duplicate merge + column sorting ==
+  [PASS] duplicates merged, exact zeros dropped
+  [PASS] row_ptr after merge
+  [PASS] columns sorted per row
+  [PASS] duplicate values summed
+== SpMV vs dense reference ==
+  residual |y_csr - y_dense|_inf = 0.000e+00
+  [PASS] spmv matches dense computation
+== Known linear system (1D Poisson, exact solution) ==
+  status=Converged iterations=50 final_residual=1.435e-14 solution_error=2.842e-14
+  [PASS] CG converged
+  [PASS] solution matches manufactured exact solution
+== Jacobi preconditioner effect ==
+  no preconditioner:   status=Converged iterations=232 residual=3.627e-10
+  jacobi preconditioner: status=Converged iterations=200 residual=1.214e-12
+  [PASS] plain CG converged
+  [PASS] preconditioned CG converged
+  [PASS] jacobi preconditioner reduces iteration count
+== Zero matrix ==
+  status=NotPositiveDefinite iterations=0 residual=0.000e+00
+  [PASS] zero matrix reported as not positive definite
+  [PASS] zero matrix does not report convergence
+== Non-positive-definite inputs ==
+  negative diagonal: status=NotPositiveDefinite
+  [PASS] negative diagonal flagged
+  indefinite (p'Ap<=0): status=NumericalBreakdown iterations=1 residual=3.000e+00
+  [PASS] indefinite matrix caught via p'Ap breakdown
+== Invalid input handling ==
+  non-square: status=NotSquare
+  [PASS] non-square matrix rejected
+  dimension mismatch: status=DimensionMismatch
+  [PASS] rhs size mismatch rejected
+  NaN rhs: status=NumericalBreakdown
+  [PASS] NaN rhs rejected
+== Random sparse SPD system (Eigen reference) ==
+  n=2000 nnz=9878 (CSR only, never densified)
+  status=Converged iterations=23 final_residual=1.010e-09 recomputed_residual=1.010e-09
+  [PASS] CG converged on random SPD system
+  [PASS] recomputed residual within tolerance
+  |x_ours - x_eigen|_inf = 3.744e-11 (eigen iterations=34)
+  [PASS] solution matches Eigen reference
+
+ALL TESTS PASSED (failures: 0)
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"sparse_tests" end time: Oct 03 23:52 CST
+"sparse_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 03 23:52 CST

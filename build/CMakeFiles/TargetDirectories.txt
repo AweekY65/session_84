@@ -1,0 +1,4 @@
+/mnt2/zjh/code/Goleta/session_84/a/build/CMakeFiles/sparse_tests.dir
+/mnt2/zjh/code/Goleta/session_84/a/build/CMakeFiles/test.dir
+/mnt2/zjh/code/Goleta/session_84/a/build/CMakeFiles/edit_cache.dir
+/mnt2/zjh/code/Goleta/session_84/a/build/CMakeFiles/rebuild_cache.dir
