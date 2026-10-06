@@ -1,0 +1,51 @@
+Start testing: Oct 03 22:59 CST
+----------------------------------------------------------
+1/1 Testing: sparse_linalg
+1/1 Test: sparse_linalg
+Command: "/mnt2/zjh/code/Goleta/session_84/b/build/test_sparse_linalg"
+Directory: /mnt2/zjh/code/Goleta/session_84/b/build
+"sparse_linalg" start time: Oct 03 22:59 CST
+Output:
+----------------------------------------------------------
+=== sparse_linalg test suite ===
+[PASS] csr_layout: dims
+[PASS] csr_layout: nnz
+[PASS] csr_layout: row_ptr (empty row)
+[PASS] csr_layout: col_idx sorted per row
+[PASS] csr_layout: values
+[PASS] duplicates: merged nnz
+[PASS] duplicates: col_idx
+[PASS] duplicates: summed values (incl. cancellation)
+[PASS] duplicates: row_ptr
+[PASS] matvec: matches dense reference
+[PASS] matvec: dimension mismatch throws
+       known_system: iters=50 residual=5.707e-16 max_err=3.553e-15
+[PASS] known_system: converged
+[PASS] known_system: solution accurate
+       jacobi: plain_iters=159 (res=8.957e-11) jacobi_iters=80 (res=1.685e-15)
+[PASS] jacobi: both converged
+[PASS] jacobi: fewer iterations than unpreconditioned
+       zero_matrix: status=NotPositiveDefinite residual=0.000e+00
+[PASS] zero_matrix: reported as not positive definite
+[PASS] invalid: non-square detected
+[PASS] invalid: rhs dimension mismatch
+       indefinite: status=NotPositiveDefinite residual=1.000e+00
+[PASS] invalid: indefinite matrix detected
+[PASS] invalid: NaN rhs detected
+       random_spd: n=200 nnz=10800 iters=6 residual=8.221e-12 max_err=1.788e-11
+[PASS] random_spd: converged
+[PASS] random_spd: residual small
+[PASS] random_spd: solution accurate
+       large_poisson: n=90000 nnz=448800 iters=550 residual=9.511e-09 verified=9.511e-09
+[PASS] large_poisson: converged
+[PASS] large_poisson: verified residual small
+=== ALL TESTS PASSED (0 failures) ===
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Passed.
+"sparse_linalg" end time: Oct 03 22:59 CST
+"sparse_linalg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 03 22:59 CST
